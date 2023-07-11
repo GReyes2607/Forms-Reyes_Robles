@@ -1,0 +1,82 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card text-bg-secondary mb-3">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <h5 class="card-title">Registro</h5>
+            </div>
+            <form [formGroup]="userModel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input [class.is-invalid]="nombresControl.touched && nombresControl.invalid"
+                                formControlName="nombres" type="text" class="form-control" id="nombres"
+                                placeholder="Ingrese sus nombre">
+                            <div class="invalid-feedback">
+                                El campo nombre es requerido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
+                            <input [class.is-invalid]="apaternoControl.touched && apaternoControl.invalid"
+                                formControlName="apaterno" type="text" class="form-control" id="apellidoPaterno"
+                                placeholder="Ingrese su apellido paterno">
+                            <div class="invalid-feedback">
+                                El campo apellido paterno es requerido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
+                            <input formControlName="amaterno" type="text" class="form-control" id="apellidoMaterno"
+                                placeholder="Ingrese su apellido materno">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input [class.is-invalid]="emailControl.touched && emailControl.invalid"
+                                formControlName="email" type="text" class="form-control" id="id"
+                                placeholder="Ingrese su email">
+                            <div class="invalid-feedback">
+                                El campo email es requerido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input [class.is-invalid]="usuarioControl.touched && usuarioControl.invalid"
+                                formControlName="usuario" type="text" class="form-control" id="usuario"
+                                placeholder="Ingrese su usuario">
+                            <div class="invalid-feedback">
+                                El campo usuario es requerido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input [class.is-invalid]="passwordControl.touched && passwordControl.invalid"
+                                formControlName="password" type="password" class="form-control" id="contrasena"
+                                placeholder="Ingrese su contraseña">
+                            <div class="invalid-feedback">
+                                El campo Contraseña es requerido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="col-4">
+        <h5>Valor</h5>
+        <pre>{{ userModel.value | json }}</pre>
+    </div> -->
+</div>
